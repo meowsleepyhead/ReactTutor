@@ -12,7 +12,7 @@ class App extends Component {
 
       <div className="App">
           <Nav></Nav>
-          <div> {this.props.simpleReducer.reduxName} </div>
+          {/* <div> {this.props.simpleReducer.reduxName} </div> */}
        <EventDemo
         myName = 'Jason'
        />
