@@ -51,7 +51,7 @@ class EventDemo extends React.Component {
          </div>
 
          <div>
-          <button className={'btn-primary'} onClick={this.simpleAction}> Redux </button>
+          <button className={'btn-primary'} onClick={this.props.simpleAction}> Redux </button>
          </div>
 
        </div>
@@ -73,7 +73,11 @@ class EventDemo extends React.Component {
    })
 
 const mapDispatchToProps = dispatch => ({
-  simpleAction: () => dispatch(simpleAction)
+  
+  simpleAction: () => {
+    console.log('aa');
+    dispatch(simpleAction())
+  }
  })
 
  export default connect(mapStateToProps, mapDispatchToProps)(EventDemo);
